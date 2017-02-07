@@ -1,0 +1,19 @@
+Brico\BackBundle\Entity\TypeAnnonce:
+    type: entity
+    table: typeannonce
+    repositoryClass: Brico\BackBundle\Repository\TypeAnnonceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: string
+            length: 255
+    oneToMany:
+        annonces:
+            targetEntity: Brico\BackBundle\Entity\Annonce
+            mappedBy: type_annonce
+    lifecycleCallbacks: { }

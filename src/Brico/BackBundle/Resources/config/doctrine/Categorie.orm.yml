@@ -1,0 +1,19 @@
+Brico\BackBundle\Entity\Categorie:
+    type: entity
+    table: categorie
+    repositoryClass: Brico\BackBundle\Repository\CategorieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: string
+            length: 255
+    manyToMany:
+        annonces:
+            targetEntity: Brico\BackBundle\Entity\Annonce
+            mappedBy: categories
+    lifecycleCallbacks: { }

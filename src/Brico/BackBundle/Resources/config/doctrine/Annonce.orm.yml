@@ -1,0 +1,46 @@
+Brico\BackBundle\Entity\Annonce:
+    type: entity
+    table: annonce
+    repositoryClass: Brico\BackBundle\Repository\AnnonceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: string
+            length: 255
+        image:
+            type: string
+            length: 255
+            nullable: true
+        marque:
+            type: string
+            length: 255
+        ville:
+            type: string
+            length: 255
+        publique:
+            type: boolean
+    manyToOne:
+        type_annonce:
+            targetEntity: Brico\BackBundle\Entity\TypeAnnonce
+            joinColumn:
+                name: type_annonce_id
+                referencedColumnName: id
+            inversedBy: annonces
+    manyToMany:
+        categories:
+            targetEntity: Brico\BackBundle\Entity\Categorie
+            inversedBy: annonces
+            joinTable:
+                name: annonce_categorie
+                joinColumns:
+                    annonce_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    categorie_id:
+                        referencedColumnName: id
+    lifecycleCallbacks: { }
