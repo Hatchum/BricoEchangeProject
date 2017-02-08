@@ -1,3 +1,15 @@
+brico_back_categorie:
+    resource: "@BricoBackBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+
+brico_back_annonce:
+    resource: "@BricoBackBundle/Resources/config/routing/annonce.yml"
+    prefix:   /annonce
+
+brico_back_typeannonce:
+    resource: "@BricoBackBundle/Resources/config/routing/typeannonce.yml"
+    prefix:   /typeannonce
+
 brico_back_homepage:
     path:     /
     defaults: { _controller: BricoBackBundle:Default:index }

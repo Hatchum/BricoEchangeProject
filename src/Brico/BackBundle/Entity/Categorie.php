@@ -17,22 +17,16 @@ class Categorie
      */
     private $description;
 
-    /**
-     * @var int
-     */
+
     private $annonces;
 
-    /**
-     * @return int
-     */
+
     public function getAnnonces()
     {
         return $this->annonces;
     }
 
-    /**
-     * @param int $annonces
-     */
+
     public function setAnnonces($annonces)
     {
         $this->annonces = $annonces;

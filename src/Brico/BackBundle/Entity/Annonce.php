@@ -47,9 +47,7 @@ class Annonce
      */
     //private $email_annonceur;
 
-    /**
-     * @var int
-     */
+
     private $categories;
 
 
@@ -215,17 +213,13 @@ class Annonce
         $this->email_annonceur = $email_annonceur;
     }
 */
-    /**
-     * @return mixed
-     */
+
     public function getCategories()
     {
         return $this->categories;
     }
 
-    /**
-     * @param mixed $categorie
-     */
+
     public function setCategories($categories)
     {
         $this->categories = $categories;

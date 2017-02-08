@@ -1,0 +1,4 @@
+services:
+#    brico_user.example:
+#        class: Brico\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

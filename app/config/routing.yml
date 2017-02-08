@@ -1,6 +1,17 @@
+brico_front:
+    resource: "@BricoFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+brico_user:
+    resource: "@BricoUserBundle/Resources/config/routing.yml"
+    prefix:   /user/
+
 brico_back:
     resource: "@BricoBackBundle/Resources/config/routing.yml"
     prefix:   /admin/
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 app:
     resource: "@AppBundle/Controller/"

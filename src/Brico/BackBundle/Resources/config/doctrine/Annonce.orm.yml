@@ -11,7 +11,7 @@ Brico\BackBundle\Entity\Annonce:
     fields:
         description:
             type: string
-            length: 255
+            length: 700
         image:
             type: string
             length: 255
