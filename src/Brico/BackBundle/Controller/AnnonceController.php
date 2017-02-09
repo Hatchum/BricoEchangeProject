@@ -41,6 +41,7 @@ class AnnonceController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $annonce->setDate(new \DateTime('now'));
             $em->persist($annonce);
             $em->flush();
 

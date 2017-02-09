@@ -1,1 +1,25 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ dump(tab_annonces) }}
+    <div class="row">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        {% for categorie, value in tab_annonces %}
+            <div class="col-sm-6" style="border: solid 1px; border-color: lightgray; border-collapse: collapse; border-radius: 7px 7px">
+                <h2 style="text-align: center">{{ categorie }}</h2>
+                    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                    {% for annonce in value %}
+                    <div class="col-sm-6" style="border: solid 1px; border-color: lightgray; border-collapse: collapse; border-radius: 7px 7px">
+                        <h3>{{ annonce.ville }}</h3>
+                        <i>{{ annonce.typeannonce.description }}</i>
+                        <i>{{ annonce.marque }}</i>
+                        <p>{% for categorie in annonce.categories %}{{ categorie.description }}{% endfor %}</p>
+                        <p style="text-align: justify">{{ annonce.description | truncate(100, true, '...') }}<a href="{{ path('annonce_show', {'id' : annonce.id}) }}"> plus</a></p>
+                    </div>
+                    {% endfor %}
+                    </div>
+               </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -24,6 +24,8 @@ Brico\BackBundle\Entity\Annonce:
             length: 255
         publique:
             type: boolean
+        date:
+            type: datetime
     manyToOne:
         type_annonce:
             targetEntity: Brico\BackBundle\Entity\TypeAnnonce

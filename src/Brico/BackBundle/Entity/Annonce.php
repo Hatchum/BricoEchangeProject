@@ -50,6 +50,27 @@ class Annonce
 
     private $categories;
 
+    /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \DateTime $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
 
     /**
      * Get id
